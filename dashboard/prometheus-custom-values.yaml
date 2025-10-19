@@ -1,0 +1,9 @@
+server:
+  additionalScrapeConfigs:
+    name: springboot-scrape-config
+    key: springboot.yaml
+  extraConfigmapMounts:
+    - name: springboot-scrape-config
+      configMap: springboot-scrape-config
+      mountPath: /etc/prometheus/scrape/springboot.yaml
+      subPath: springboot.yaml
